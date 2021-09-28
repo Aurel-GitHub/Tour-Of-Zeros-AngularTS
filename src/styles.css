@@ -3,10 +3,11 @@
 
 
 body {
-  margin: 2em;
+  margin: 2em !important;
 }
 
 /* everywhere else */
 * {
-  font-family: 'Gemunu Libre', sans-serif;
+  font-family: 'Gemunu Libre', sans-serif !important;
 }
+

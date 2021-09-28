@@ -1,0 +1,4 @@
+.col.align-items-stretch :hover {
+  opacity: 80%;
+  border-color: black ;
+}

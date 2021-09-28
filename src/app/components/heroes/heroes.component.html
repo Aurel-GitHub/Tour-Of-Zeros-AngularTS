@@ -1,0 +1,17 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <ng-container *ngFor="let hero of heroes, index as i">
+    <div class="col align-items-stretch" (click)="openDialog()">
+      <div class="card shadow-sm">
+        <img class="card-img-top" src={{hero.image}} alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">{{hero.name | uppercase}}</h3>
+          <p class="card-text">{{hero.description}}</p>
+        </div>
+        <hr>
+        <input id="name" class="px-2 mx-2 my-2" [(ngModel)]="hero.name" placeholder="name">
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+

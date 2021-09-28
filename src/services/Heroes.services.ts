@@ -18,7 +18,7 @@ export const HEROES: Hero[] = [
     id: uuidv4(),
     name: 'Arm Fall Off Boy',
     description: "Au jeu du personnage le plus ridicule, il serait sans doute parmi les premiers... et il faut bien avouer qu'on donnerait difficilement tort aux votants. Capable de détacher son bras gauche pour s'en servir comme une arme, Arm Fall Off Boy a souvent été élu comme le personnage le plus ridicule de l'univers des comics.",
-    image: '../../assets/img/arm-fall-of-boy.jpg',
+    image: '../../assets/img/arm-fall-off-boy.jpg',
   },
   {
     id: uuidv4(),
@@ -40,27 +40,27 @@ export const HEROES: Hero[] = [
   },
   {
     id: uuidv4(),
-    name: '',
-    description: "",
-    image: '',
+    name: 'Zeep, The Living Sponge',
+    description: "Difficile de faire plus ridicule que Zeep, l'Eponge Vivante ! Lorsque les super-héros comme Superman ou Batman ne sont pas disponibles, il existe la Hero Hotline, un groupe de héros aux pouvoirs divers prêts à passer à l'action. Et au milieu de cette équipe, il y a Zeep... qui a donc toutes les capacités d'une éponge mais à taille humaine. Quitte à absorber de l'eau en cas de danger, autant appeler Aquaman, non ? ",
+    image: '../../assets/img/zeep-the-living-sponge.jpg',
   },
   {
     id: uuidv4(),
-    name: '',
-    description: "",
-    image: '',
+    name: 'Color Kid',
+    description: "Pas la peine d'aller plus loin dans le détail : Color Kid est un super-héros qui a le pouvoir de changer de couleur n'importe quel objet à volonté. Si l'on peut peut-être trouver cool le fait qu'il puisse aussi modifier la couleur du ciel, il faut bien avouer que l'utilité d'un tel personnage dans un combat décisif pour la survie de l'Humanité pose question...",
+    image: '../../assets/img/color-kid.jpg',
   },
   {
     id: uuidv4(),
-    name: '',
-    description: "",
-    image: '',
+    name: 'The Defenestrator',
+    description: "Dans l'équipe de la Section 8, vous pensiez qu'il ne pouvait pas y avoir pire que Dogwelder ? Détrompez-vous, voici The Defenestrator, un personnage qui se balade toujours avec une fenêtre sur lui pour la briser sur un ennemi et ainsi le faire passer à travers.Honnêtement, on adorerait pouvoir voyager dans le temps et assister à la création de ce personnage, savoir qui a eu une telle idée et surtout qui a validé le concept... ",
+    image: '../../assets/img/the-defenestrator.jpg',
   },
   {
     id: uuidv4(),
-    name: '',
-    description: "",
-    image: '',
+    name: 'Codpiece',
+    description: "Il n'est certes pas le méchant le plus connu de l'univers DC, mais l'on se dit qu'il mériterait presque de l'être. Devenu un ennemi récurrent de la Doom Patrol, Codpiece est un adversaire de taille avec son armure high-tech et sa puissance de feu. Mais le gros problème, c'est son canon situé à l'entrejambe. Comme si la localisation de l'arme ne contribuait pas assez au ridicule de la situation, ce canon possède aussi un gant de boxe, des ciseaux, un grappin, un lance-roquette et autres armes à feu. Et le plus drôle dans tout ça, c'est l'origine d'une telle arme... Au temps du lycée, une fille avait rejeté ses avances, affirmant qu’il n’était pas assez grand (on parle bien de la taille). Croyant que c’était une insulte à ses organes génitaux, il a formé un grand complexe tout au long de sa vie d’adulte pour finir par créer ce costume bien équipé. À quand le film sur Codpiece désormais ?",
+    image: '../../assets/img/codpiece.jpg',
   },
 
 ];
