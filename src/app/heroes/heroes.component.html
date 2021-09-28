@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{hero.image}} alt="Card image cap">
+  <div class="card-body">
+    <h3 class="card-title">{{hero.name | uppercase}}</h3>
+    <p class="card-text">{{hero.description}}</p>
+    <a href="#" class="btn btn-primary">Détails</a>
+  </div>
+  <hr>
+  <input id="name" class="px-2 mx-2 my-2" [(ngModel)]="hero.name" placeholder="name">
+</div>
