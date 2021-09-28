@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, Input, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { HEROES } from '../../../services/Heroes.services';
 
 
 @Component({
@@ -9,8 +10,9 @@ import { MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/d
 })
 export class HeroesDetailsModalComponent implements OnInit {
 
-  name: string;
-  constructor(@Inject(MAT_DIALOG_DATA) public data) { }
+  @Input() idHero: string;
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data) {}
 
 
   ngOnInit(): void {

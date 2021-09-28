@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
   <ng-container *ngFor="let hero of heroes, index as i">
-    <div class="col align-items-stretch" (click)="openDialog()">
+    <div class="col align-items-stretch" (click)="openDialog(hero.id)" >
       <div class="card shadow-sm">
         <img class="card-img-top" src={{hero.image}} alt="Card image cap">
         <div class="card-body">
