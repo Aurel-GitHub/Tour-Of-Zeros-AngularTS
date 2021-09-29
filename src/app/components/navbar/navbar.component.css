@@ -2,3 +2,11 @@ h1.title-h1{
   text-align: center;
   font-size: 60px;
   }
+  #a-login {
+    text-decoration: none;
+    color: white;
+  }
+  #a-title {
+    text-decoration: none;
+    color: black;
+  }

@@ -11,6 +11,8 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AuthComponent } from './auth/auth.component';
+import { FourOhFourComponent } from './components/four-oh-four/four-oh-four.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MessagesComponent,
     HomeComponent,
     NavbarComponent,
+    AuthComponent,
+    FourOhFourComponent,
   ],
   imports: [
     BrowserModule,
