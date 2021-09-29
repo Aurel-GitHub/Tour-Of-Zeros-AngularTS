@@ -8,3 +8,7 @@ span.description-modal {
 button.update-data {
   margin-right: 10px;
 }
+a.a-update {
+  text-decoration: none;
+  color: black;
+}

@@ -15,7 +15,7 @@
     </div>
   </div>
   <mat-dialog-actions>
-    <button class="update-data" (click)="handleUpdateValue()">Modifier</button>
+    <button class="update-data"><a class="a-update" routerLink="/udapte-hero/{{data.id}}" routerLinkActive="active">Modifier</a></button>
     <button mat-button mat-dialog-close id="mat-button">Quitter</button>
   </mat-dialog-actions>
 

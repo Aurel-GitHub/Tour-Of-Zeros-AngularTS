@@ -8,6 +8,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesDetailsModalComponent } from './modal/heroes-details-modal/heroes-details-modal.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { UpdateHeroComponent } from './components/heroes/update-hero/update-hero.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { MessagesComponent } from './components/messages/messages.component';
     HeroesComponent,
     HeroesDetailsModalComponent,
     MessagesComponent,
+    UpdateHeroComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {}}

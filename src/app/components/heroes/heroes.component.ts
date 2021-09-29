@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HeroesDetailsModalComponent } from 'src/app/modal/heroes-details-modal/heroes-details-modal.component';
@@ -23,12 +24,13 @@ export class HeroesComponent implements OnInit {
     this.getHeroes()
   }
 
-  openDialog(name: string, description: string, image:string): void {
+  openDialog(id: string, name: string, description: string, image:string): void {
     this.dialog.open(HeroesDetailsModalComponent, {
       width: '600px',
       height: '500px',
       maxHeight: '600px',
       data: {
+        id: id,
         name: name,
         description: description,
         image: image,
