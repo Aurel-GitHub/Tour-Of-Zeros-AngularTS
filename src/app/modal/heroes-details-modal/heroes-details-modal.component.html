@@ -1,6 +1,5 @@
 <div class="container">
 <h1>{{data.name}}</h1>
-  <!-- <input id="name" class="px-2 mx-2 my-2" [(ngModel)]="data.name" placeholder="name"> -->
   <div class="row">
     <div class="col">
       <div class="img">
@@ -10,15 +9,25 @@
     <div class="col">
       <span class="description-modal">
         {{data.description}}
-        <!-- <input id="update-description-modal" class="px-2 py-2" [(ngModel)]="data.description" placeholder="name"> -->
       </span>
     </div>
   </div>
   <mat-dialog-actions>
-    <button class="update-data"><a class="a-update" routerLink="/udapte-hero/{{data.id}}" routerLinkActive="active">Modifier</a></button>
+    <button class="update-data" (click)="handleUpdateValue()">Modifier</button>
     <button mat-button mat-dialog-close id="mat-button">Quitter</button>
   </mat-dialog-actions>
 
+  <ng-container *ngIf="updateValue">
+    <div class="row mt-5">
+      <hr>
+      <div class="col">
+          <input id="modal-update-name" [(ngModel)]="data.name">
+      </div>
+      <div class="col">
+          <textarea id="modal-update-description" [(ngModel)]="data.description"></textarea>
+      </div>
+    </div>
+  </ng-container>
 </div>
 
 

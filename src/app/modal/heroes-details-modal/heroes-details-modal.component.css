@@ -12,3 +12,9 @@ a.a-update {
   text-decoration: none;
   color: black;
 }
+#modal-update-name {
+  width: 100%;
+}
+#modal-update-description {
+  width: 100%;
+}

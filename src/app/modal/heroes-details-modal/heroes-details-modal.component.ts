@@ -11,13 +11,19 @@ import { MessageService } from 'src/services/Messages.services';
 export class HeroesDetailsModalComponent implements OnInit {
 
   updateValue: boolean = false;
+  id: string;
+  name: string;
+  description: string;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Hero,
     private messagerieService: MessageService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.name = this.data.name;
+    this.description = this.data.description;
+  }
 
   handleUpdateValue(): void {
     if (this.updateValue === false) {

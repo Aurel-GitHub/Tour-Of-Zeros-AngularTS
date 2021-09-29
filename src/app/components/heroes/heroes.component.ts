@@ -26,7 +26,7 @@ export class HeroesComponent implements OnInit {
 
   openDialog(id: string, name: string, description: string, image:string): void {
     this.dialog.open(HeroesDetailsModalComponent, {
-      width: '600px',
+      width: '700px',
       height: '500px',
       maxHeight: '600px',
       data: {

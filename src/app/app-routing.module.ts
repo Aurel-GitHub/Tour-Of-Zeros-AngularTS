@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-
-import { UpdateHeroComponent } from './components/heroes/update-hero/update-hero.component';
 import { AppComponent } from './app.component';
 
+import { HomeComponent } from './components/home/home.component';
+
 const routes: Routes = [
-  {path: 'udapte-11hero/:id', component: UpdateHeroComponent},
+
+  {path: '', component: HomeComponent}
 ]
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
