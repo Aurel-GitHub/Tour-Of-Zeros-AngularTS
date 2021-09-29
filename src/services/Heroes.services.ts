@@ -17,5 +17,8 @@ export class HeroesService {
     })
     return arrayResult;
   }
+  getAll(): Hero[] {
+    return heroesData;
+  }
 
 }

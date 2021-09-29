@@ -1,9 +1,6 @@
 import { Hero } from "src/interfaces/IHero";
 import { v4 as uuidv4 } from 'uuid';
 
-export class HeroesService {
-
-}
 export const heroesData: Hero[] = [
   {
     id: uuidv4(),

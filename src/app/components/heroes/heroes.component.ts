@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { heroesData } from 'src/data/Heroes.data';
 import { MatDialog } from '@angular/material/dialog';
 import { HeroesDetailsModalComponent } from 'src/app/modal/heroes-details-modal/heroes-details-modal.component';
+import { Hero } from 'src/interfaces/IHero';
+import { HeroesService } from 'src/services/Heroes.services';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -10,16 +11,13 @@ import { HeroesDetailsModalComponent } from 'src/app/modal/heroes-details-modal/
 
 export class HeroesComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private heroesService: HeroesService) {}
 
   hero: [];
-  heroes = heroesData;
+  heroes: Hero[] = [];
 
   ngOnInit(): void {
-  }
-
-  getId(idValue: string) {
-    return idValue;
+    this.getHeroes()
   }
 
   openDialog(name: string, description: string, image:string): void {
@@ -33,5 +31,9 @@ export class HeroesComponent implements OnInit {
         image: image,
       }
     });
+  }
+
+  getHeroes(): void {
+    this.heroes = this.heroesService.getAll()
   }
 }
