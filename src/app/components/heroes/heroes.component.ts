@@ -11,10 +11,13 @@ import { HeroesService } from 'src/services/Heroes.services';
 
 export class HeroesComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, private heroesService: HeroesService) {}
-
   hero: [];
   heroes: Hero[] = [];
+
+  constructor(
+    private dialog: MatDialog,
+    private heroesService: HeroesService,
+  ) {}
 
   ngOnInit(): void {
     this.getHeroes()

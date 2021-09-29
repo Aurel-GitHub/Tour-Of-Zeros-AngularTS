@@ -5,3 +5,6 @@ img.img-modal{
 span.description-modal {
   font-size: 16px;
 }
+button.update-data {
+  margin-right: 10px;
+}
