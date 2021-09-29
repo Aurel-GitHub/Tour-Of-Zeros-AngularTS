@@ -1,6 +1,6 @@
-import { Component, ElementRef, Inject, Input, OnInit, ViewChild } from '@angular/core';
-import { heroesData } from 'src/data/Heroes.data';
-
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Hero } from 'src/interfaces/IHero';
 
 @Component({
   selector: 'app-heroes-details-modal',
@@ -9,11 +9,8 @@ import { heroesData } from 'src/data/Heroes.data';
 })
 export class HeroesDetailsModalComponent implements OnInit {
 
-  @Input() heroData: [];
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Hero) {}
 
-  constructor() {}
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { HeroesDetailsModalComponent } from 'src/app/modal/heroes-details-modal/heroes-details-modal.component';
 import { HeroesService } from 'src/services/Heroes.services';
 import { Subscription } from 'rxjs';
+import { Hero } from 'src/interfaces/IHero';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -12,10 +13,7 @@ import { Subscription } from 'rxjs';
 
 export class HeroesComponent implements OnInit {
 
-  constructor(
-    private dialogRef: MatDialog,
-    private heroesService: HeroesService
-  ) {}
+  constructor(private dialog: MatDialog) {}
 
   hero: [];
   heroes = heroesData;
@@ -28,11 +26,15 @@ export class HeroesComponent implements OnInit {
     return idValue;
   }
 
-  openDialog(idValue): any {
-    this.dialogRef.open(HeroesDetailsModalComponent);
-    let id = this.getId(idValue);
-    this.hero = this.heroesService.getHeroeById(id);
-    console.log('dsfsdfd', this.hero);
+  openDialog(name: string, description: string, image:string): void {
+    this.dialog.open(HeroesDetailsModalComponent, {
+      width: '330px',
+      height: '400px',
+      data: {
+        name: name,
+        description: description,
+        image: image,
+      }
+    });
   }
-
 }
