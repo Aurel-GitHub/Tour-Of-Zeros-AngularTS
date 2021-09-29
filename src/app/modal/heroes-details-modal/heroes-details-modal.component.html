@@ -4,7 +4,7 @@
     <div class="col">
       <div class="img">
         <img src={{data.image}} class="img-modal">
-        </div>
+      </div>
     </div>
     <div class="col">
       <span class="description-modal">
@@ -20,14 +20,21 @@
   <ng-container *ngIf="updateValue">
     <div class="row mt-5">
       <hr>
-      <div class="col">
-          <input id="modal-update-name" [(ngModel)]="data.name">
-      </div>
-      <div class="col">
-          <textarea id="modal-update-description" [(ngModel)]="data.description"></textarea>
-      </div>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="col">
+          <div class="form-group">
+            <label>Nom</label>
+            <input id="modal-update-name" class="form-control" name="name" ngModel  [(ngModel)]="data.name">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="modal-update-description" class="form-control" name="description" [(ngModel)]="data.description " ngModel ></textarea>
+          </div>
+          <button class="btn btn-primary mt-2" [disabled]="f.invalid">Enregistrer</button>
+        </div>
+      </form>
     </div>
   </ng-container>
 </div>
-
-
