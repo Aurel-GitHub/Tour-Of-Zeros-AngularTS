@@ -1,5 +1,8 @@
 <div class="container">
 <h1>{{data.name}}</h1>
+<div class="alert alert-danger" role="alert" *ngIf="!userConnected.length">
+  Veuillez-vous connecter pour modifier {{data.name}}
+</div>
   <div class="row">
     <div class="col">
       <div class="img">
@@ -14,7 +17,7 @@
   </div>
 
   <mat-dialog-actions>
-    <button class="update-data" (click)="handleUpdateValue()">Modifier</button>
+    <button class="update-data" (click)="handleUpdateValue()" [disabled]="!userConnected.length">Modifier</button>
     <button mat-button mat-dialog-close id="mat-button">Quitter</button>
   </mat-dialog-actions>
 

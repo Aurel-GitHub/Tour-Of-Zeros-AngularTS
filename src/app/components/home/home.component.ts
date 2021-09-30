@@ -10,7 +10,6 @@ import { UserService } from 'src/services/Users.services';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  isConnected: boolean = false;
   users: User[];
   userSubscription: Subscription;
 
@@ -23,12 +22,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     );
     this.userService.emitUsers();
-    this.userIsConnected();
-    console.log(this.isConnected)
-  }
-
-  userIsConnected() {
-    this.users.length ? this.isConnected = true : this.isConnected = false;
   }
 
   ngOnDestroy() {

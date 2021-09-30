@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessageService } from 'src/services/Messages.services';
 import { UserService } from 'src/services/Users.services';
 import { User } from '../../models/User.models';
 
@@ -17,6 +18,7 @@ export class AuthComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: UserService,
     private router: Router,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +39,9 @@ export class AuthComponent implements OnInit {
       formValue['password']
     );
     this.userService.addUser(newUser);
-    this.router.navigate(['']);
+    setTimeout(() => {
+      this.messageService.add('Vous êtes connecté')
+      this.router.navigate(['']);
+    },1000)
   }
 }

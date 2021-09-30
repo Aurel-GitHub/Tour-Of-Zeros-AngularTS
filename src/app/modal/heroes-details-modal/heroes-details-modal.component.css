@@ -18,3 +18,6 @@ a.a-update {
 #modal-update-description {
   width: 100%;
 }
+.alert.alert-danger {
+  padding: 5px;
+}

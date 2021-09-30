@@ -1,11 +1,12 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Hero } from 'src/interfaces/IHero';
+import { User } from 'src/models/User.models';
 import { HeroesService } from 'src/services/Heroes.services';
 import { MessageService } from 'src/services/Messages.services';
+import { UserService } from 'src/services/Users.services';
 
 @Component({
   selector: 'app-heroes-details-modal',
@@ -20,11 +21,13 @@ export class HeroesDetailsModalComponent implements OnInit {
   description: string;
   image: string;
   heroSubscription: Subscription;
+  userConnected: User[] = [];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Hero,
     private messagerieService: MessageService,
     private heroService: HeroesService,
+    private userService: UserService,
   ) {}
 
   ngOnInit(): void {
@@ -32,12 +35,12 @@ export class HeroesDetailsModalComponent implements OnInit {
     this.name = this.data.name;
     this.description = this.data.description;
     this.image = this.data.image;
+    this.userConnected = this.userService.getUser();
   }
 
   handleUpdateValue(): void {
     if (this.updateValue === false) {
       this.updateValue = true;
-      this.messagerieService.add('HeroService: '+ this.data.name + ' will be updated later');
     } else if (this.updateValue === true) {
       this.updateValue = false;
     }
@@ -49,6 +52,7 @@ export class HeroesDetailsModalComponent implements OnInit {
     const descriptionForm = form.value['description'];
     const imageForm = this.image;
     this.heroService.updateHero(idForm, nameForm, descriptionForm, imageForm);
+    this.messagerieService.add('HeroService: '+ this.data.name + ' was updated');
     this.updateValue = false;
   }
 }

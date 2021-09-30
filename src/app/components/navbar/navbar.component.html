@@ -2,6 +2,8 @@
 <nav class="navbar navbar-light  justify-content-between">
   <h1 class="title-h1"><a routerLink="" id="a-title">{{title}}</a></h1>
   <form class="form-inline">
-    <button type="button" class="btn btn-dark" routerLink='/login'>Se connecter</button>
+    <button type="button" class="btn btn-dark" routerLink='/login' *ngIf="!userConnected.length">Se connecter</button>
+    <button type="button" class="btn btn-dark" (click)="logout()" *ngIf="userConnected.length">Se déconnecter</button>
+
   </form>
 </nav>

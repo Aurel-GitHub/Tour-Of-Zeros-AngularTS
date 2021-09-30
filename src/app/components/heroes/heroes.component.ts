@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HeroesDetailsModalComponent } from 'src/app/modal/heroes-details-modal/heroes-details-modal.component';
 import { Hero } from 'src/interfaces/IHero';
+import { User } from 'src/models/User.models';
 import { HeroesService } from 'src/services/Heroes.services';
 @Component({
   selector: 'app-heroes',
