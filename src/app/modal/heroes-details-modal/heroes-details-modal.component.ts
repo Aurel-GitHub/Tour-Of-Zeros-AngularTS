@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -25,7 +25,6 @@ export class HeroesDetailsModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: Hero,
     private messagerieService: MessageService,
     private heroService: HeroesService,
-    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +32,6 @@ export class HeroesDetailsModalComponent implements OnInit {
     this.name = this.data.name;
     this.description = this.data.description;
     this.image = this.data.image;
-
   }
 
   handleUpdateValue(): void {

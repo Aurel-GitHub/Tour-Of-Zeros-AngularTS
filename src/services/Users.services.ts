@@ -1,7 +1,6 @@
 import { Subject } from 'rxjs';
-import { User } from '../models/User.models';
 import { Injectable } from '@angular/core'; // at top
-
+import { User } from '../models/User.models';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,6 @@ export class UserService {
   emitUsers() {
     this.userSubject.next(this.users.slice());
   }
-
 
   addUser(user: User) {
     this.users.push(user);
