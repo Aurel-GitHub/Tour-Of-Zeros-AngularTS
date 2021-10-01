@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-tour-of-zeros"
+  "defaultProject": "angular-tour-of-zeros",
+  "cli": {
+    "analytics": "3524177e-8f15-4bab-a7dc-253329bb5d8d"
+  }
 }
